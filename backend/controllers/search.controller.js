@@ -1,4 +1,4 @@
-import { User } from "../models/User.model.js";
+import User from '../models/user.model.js';
 import { fetchFromTMDB } from "../services/tmdb.service.js";
 
 //search for person on the database - shows in the user search history
@@ -123,4 +123,3 @@ try {
 }
 
 }
-   
