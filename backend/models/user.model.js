@@ -1,23 +1,23 @@
 import mongoose from "mongoose";
-const userSchema = new mongoose.Schema({
 
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
         unique: true,
-    },  
+    },
     email: {
         type: String,
         required: true,
         unique: true,
     },
-    password:{
+    password: {
         type: String,
-        required: true,          
+        required: true,
     },
     image: {
         type: String,
-        default:"",
+        default: "",
     },
     searchHistory: {
         type: Array,
@@ -25,5 +25,8 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-export const User = mongoose.model("User", userSchema);
+// Check if the User model is already defined before defining it again
+const User = mongoose.models.User || mongoose.model("User", userSchema);
+
+export default User;
 // Creates a user collection that is based on the above Schema
