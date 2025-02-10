@@ -3,6 +3,10 @@ cf6-educational-project
 
 This project is a demonstrative Netflix Clone built with the MERN Stack for the Final Project of CF6
 
+##Features
+- Authentication with JWT, Extensive UI.
+- 🎥 Movies and TV Shows from TMDB API, 🔎 Movies and Actors Search History,🎬 Trailers.
+  
 ## Tech Stack
 - React.js
 - Node.js
